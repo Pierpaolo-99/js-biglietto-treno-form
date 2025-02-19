@@ -25,18 +25,23 @@ const kmtravelEl = document.getElementById('km_travel')
 const ageRange = document.getElementById('age_range')
 const submitEl = document.getElementById('generate_btn')
 
-// generazione prezzo del biglietto
-const priceTicket = kmtravelEl.value * 0.21
-
-// generazione sconti per minorenni e over 65
-const priceTicketMinors = priceTicket - (priceTicket * 0.2)
-const priceTicketAdults = priceTicket - (priceTicket * 0.4)
-
 submitEl.addEventListener('click', function(){
     console.log(nameEl.value);
     console.log(kmtravelEl.value);
-    console.log(ageRange.value);
-    console.log(priceTicket);
+
+    const priceTicket = kmtravelEl.value * 0.21
+    const priceTicketMinors = priceTicket - (priceTicket * 0.2)
+    const priceTicketOver65 = priceTicket - (priceTicket * 0.4)
+    
+    if (ageRange.value === 'Minors'){
+        console.log(priceTicketMinors); 
+    }
+    else if (ageRange.value === 'Over-65'){
+        console.log(priceTicketOver65);
+    }
+    else{
+        console.log(priceTicket);    
+    }
 })
 
 
