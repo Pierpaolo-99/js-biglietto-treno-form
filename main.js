@@ -24,6 +24,7 @@ const nameEl = document.getElementById('name')
 const kmtravelEl = document.getElementById('km_travel')
 const ageRange = document.getElementById('age_range')
 const submitEl = document.getElementById('generate_btn')
+const formEl = document.getElementById('train_ticket')
 
 
 const userName = document.getElementById('username')
@@ -32,7 +33,9 @@ const rateTicket = document.getElementById('offer')
 const trainCarriage = document.getElementById('carriage')
 const codeCP = document.getElementById('code_CP')
 
-submitEl.addEventListener('click', function(){
+formEl.addEventListener('submit', function(e){
+    e.preventDefault()
+
     userName.innerHTML = nameEl.value
     trainCarriage.innerHTML = Math.floor(Math.random() * 21)
     codeCP.innerHTML = Math.floor(Math.random() * 100000)
