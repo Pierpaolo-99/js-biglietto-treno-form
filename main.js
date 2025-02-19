@@ -29,10 +29,13 @@ const submitEl = document.getElementById('generate_btn')
 const userName = document.getElementById('username')
 const price = document.getElementById('price_ticket')
 const rateTicket = document.getElementById('offer')
+const trainCarriage = document.getElementById('carriage')
+const codeCP = document.getElementById('code_CP')
 
 submitEl.addEventListener('click', function(){
-
     userName.innerHTML = nameEl.value
+    trainCarriage.innerHTML = Math.floor(Math.random() * 21)
+    codeCP.innerHTML = Math.floor(Math.random() * 100000)
 
     console.log(nameEl.value);
     console.log(kmtravelEl.value);
@@ -44,18 +47,18 @@ submitEl.addEventListener('click', function(){
     
     if (ageRange.value === 'Minors'){
         price.innerHTML = priceTicketMinors.toFixed(2)
-        console.log(priceTicketMinors); 
+        console.log(priceTicketMinors.toFixed(2)); 
         rateTicket.innerHTML = 'Bigliatto minorenni'
 
     }
     else if (ageRange.value === 'Over-65'){
         price.innerHTML = priceTicketOver65.toFixed(2)
-        console.log(priceTicketOver65);
+        console.log(priceTicketOver65.toFixed(2));
         rateTicket.innerHTML = 'Bigliatto Over-65'
     }
     else{
         price.innerHTML = priceTicket.toFixed(2)
-        console.log(priceTicket);
+        console.log(priceTicket.toFixed(2));
         rateTicket.innerHTML = 'Bigliatto Standard'    
     }
 })
