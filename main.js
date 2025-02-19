@@ -25,7 +25,13 @@ const kmtravelEl = document.getElementById('km_travel')
 const ageRange = document.getElementById('age_range')
 const submitEl = document.getElementById('generate_btn')
 
+
+const userName = document.getElementById('username')
+
 submitEl.addEventListener('click', function(){
+
+    userName.innerHTML = nameEl.value
+    
     console.log(nameEl.value);
     console.log(kmtravelEl.value);
     console.log(ageRange.value);
