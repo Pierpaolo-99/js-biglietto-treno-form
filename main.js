@@ -18,23 +18,27 @@ Solo una volta che il milestone 1 sarà completo e funzionante allora realizzere
 MILESTONE 3:
 Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.*/
 
-// chiedere all'utente i km da percorrere
 
-const userKmTravel = Number(prompt('inserisci il numero di km da percorrere'))
 
-// chiedere all'utente l'età
+const nameEl = document.getElementById('name')
+const kmtravelEl = document.getElementById('km_travel')
+const ageRange = document.getElementById('age_range')
+const submitEl = document.getElementById('generate_btn')
 
-const userAge = Number(prompt("inserisci l'età"))
+// generazione prezzo del biglietto
+const priceTicket = kmtravelEl.value * 0.21
 
-// generare il prezzo del biglietto 
-
-const priceTicket = numberKm * 0.21
-
-// sconto per minorenni
-
+// generazione sconti per minorenni e over 65
 const priceTicketMinors = priceTicket - (priceTicket * 0.2)
-
-// sconto per over 65
-
 const priceTicketAdults = priceTicket - (priceTicket * 0.4)
+
+submitEl.addEventListener('click', function(){
+    console.log(nameEl.value);
+    console.log(kmtravelEl.value);
+    console.log(ageRange.value);
+    console.log(priceTicket);
+})
+
+
+
 
