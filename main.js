@@ -27,11 +27,12 @@ const submitEl = document.getElementById('generate_btn')
 
 
 const userName = document.getElementById('username')
+const price = document.getElementById('price_ticket')
 
 submitEl.addEventListener('click', function(){
 
     userName.innerHTML = nameEl.value
-    
+
     console.log(nameEl.value);
     console.log(kmtravelEl.value);
     console.log(ageRange.value);
@@ -41,12 +42,15 @@ submitEl.addEventListener('click', function(){
     const priceTicketOver65 = priceTicket - (priceTicket * 0.4)
     
     if (ageRange.value === 'Minors'){
+        price.innerHTML = priceTicketMinors.toFixed(2)
         console.log(priceTicketMinors); 
     }
     else if (ageRange.value === 'Over-65'){
+        price.innerHTML = priceTicketOver65.toFixed(2)
         console.log(priceTicketOver65);
     }
     else{
+        price.innerHTML = priceTicket.toFixed(2)
         console.log(priceTicket);    
     }
 })
