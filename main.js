@@ -28,6 +28,7 @@ const submitEl = document.getElementById('generate_btn')
 
 const userName = document.getElementById('username')
 const price = document.getElementById('price_ticket')
+const rateTicket = document.getElementById('offer')
 
 submitEl.addEventListener('click', function(){
 
@@ -44,14 +45,18 @@ submitEl.addEventListener('click', function(){
     if (ageRange.value === 'Minors'){
         price.innerHTML = priceTicketMinors.toFixed(2)
         console.log(priceTicketMinors); 
+        rateTicket.innerHTML = 'Bigliatto minorenni'
+
     }
     else if (ageRange.value === 'Over-65'){
         price.innerHTML = priceTicketOver65.toFixed(2)
         console.log(priceTicketOver65);
+        rateTicket.innerHTML = 'Bigliatto Over-65'
     }
     else{
         price.innerHTML = priceTicket.toFixed(2)
-        console.log(priceTicket);    
+        console.log(priceTicket);
+        rateTicket.innerHTML = 'Bigliatto Standard'    
     }
 })
 
