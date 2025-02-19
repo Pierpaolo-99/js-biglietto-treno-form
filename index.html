@@ -4,17 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-danger">
+    <div class="container">
 
-    <input id="name" type="text">
-    <input id="km_travel" type="text">
-    <select name="age_range" id="age_range">
-        <option value="Adults">Maggiorenne</option>
-        <option value="Minors">Minorenne</option>
-        <option value="Over-65">Over-65</option>
-    </select>
-    <button id="generate_btn">GENERA</button>
+        <h1 class="text-center text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        
+        <div class="card p-5">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nome</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="name"
+                            id="name"
+                            aria-describedby="helpId"
+                            placeholder="inserisci nome"
+                        />
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Km da percorrere</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="km_travel"
+                            id="km_travel"
+                            aria-describedby="helpId"
+                            placeholder="inserisci km"
+                        />
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Fascia d'età</label>
+                        <select
+                            class="form-select form-select"
+                            name="age_range"
+                            id="age_range"
+                        >
+                            <option selected>Select one</option>
+                            <option value="Adults">Maggiorenne</option>
+                            <option value="Minors">Minorenne</option>
+                            <option value="Over-65">Over-65</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-end">
+                    <button id="generate_btn">GENERA</button>
+                </div>
+                <div class="col text-start">
+                    <button id="cancel">ANNULLA</button>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-center text-white">IL TUO BIGLIETTO</h1>   
+        
+        <div class="card p-4">
+            <h3>DETTAGLI PASSEGGERI</h3>
+            <div class="row">
+                <div class="col-4 bg-secondary">
+                    <h4>NOME PASSEGGERO</h4>
+                    <strong>JOHN SNOW</strong>
+                </div>
+                <div class="col-8">
+                    <div
+                        class="table-responsive"
+                    >
+                        <table
+                            class="table"
+                        >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Offerta</th>
+                                    <th scope="col">Carrozza</th>
+                                    <th scope="col">Codice CP</th>
+                                    <th scope="col">Costo Biglietto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td scope="row">R1C1</td>
+                                    <td>R1C2</td>
+                                    <td>R1C3</td>
+                                    <td>R1C3</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
     <script src="./main.js"></script>
 </body>

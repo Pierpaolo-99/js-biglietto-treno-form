@@ -28,6 +28,7 @@ const submitEl = document.getElementById('generate_btn')
 submitEl.addEventListener('click', function(){
     console.log(nameEl.value);
     console.log(kmtravelEl.value);
+    console.log(ageRange.value);
 
     const priceTicket = kmtravelEl.value * 0.21
     const priceTicketMinors = priceTicket - (priceTicket * 0.2)
